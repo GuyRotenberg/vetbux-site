@@ -254,7 +254,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .skip:focus { top: calc(env(safe-area-inset-top, 0px) + 10px); }
 .req { color: var(--muted); font-weight: 400; }
 .field input[aria-invalid="true"] { border-color: #b3261e; }
-.legal { display: grid; gap: 10px; max-width: 760px; }
+.legal { max-width: 760px; width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 0; }
+.legal summary h2 { font: 700 1.05rem/1.4 var(--body); margin: 0; }
+.legal-body { display: grid; gap: 10px; padding-bottom: 16px; }
+.legal-body p { padding-bottom: 0; }
 .legal h3 { font-size: 1.05rem; font-family: var(--body); font-weight: 700; margin-top: 8px; }
 .legal p, .legal li { color: var(--muted); font-size: .92rem; }
 .legal ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
@@ -716,9 +719,10 @@ footer a { color: var(--muted); }
 </main>
 
 <footer>
-  <div class="wrap" style="display:grid;gap:28px">
-    <section class="legal" id="privacy" aria-labelledby="privacy-title">
-      <h2 id="privacy-title" style="font-size:1.35rem">מדיניות פרטיות</h2>
+  <div class="wrap" style="display:grid;gap:10px">
+    <details class="legal" id="privacy">
+      <summary><h2 id="privacy-title">מדיניות פרטיות</h2></summary>
+      <div class="legal-body">
       <p>עודכנה ב-17/11/2026. האתר שייך ל-VetBux, שמפתחת תוכנה למרפאות וטרינריות.</p>
       <h3>מה אנחנו אוספים ולמה</h3>
       <ul>
@@ -734,10 +738,12 @@ footer a { color: var(--muted); }
       <p>האתר לא משתמש בעוגיות, בכלי מעקב או בפרסום מותאם, והגופנים נטענים מהאתר עצמו.</p>
       <h3>כמה זמן ומה הזכויות שלכם</h3>
       <p>נשמור את הפרטים עד שנה מהפנייה האחרונה, ואז נמחק. אפשר לבקש לראות את הפרטים שלכם, לתקן או למחוק אותם, במייל <a href="mailto:vetbuxsupport@gmail.com" dir="ltr">vetbuxsupport@gmail.com</a> או דרך הטופס בדף.</p>
-    </section>
+      </div>
+    </details>
 
-    <section class="legal" id="accessibility" aria-labelledby="a11y-title">
-      <h2 id="a11y-title" style="font-size:1.35rem">הצהרת נגישות</h2>
+    <details class="legal" id="accessibility">
+      <summary><h2 id="a11y-title">הצהרת נגישות</h2></summary>
+      <div class="legal-body">
       <p>עודכנה ב-17/11/2026. האתר הותאם לתקן הישראלי 5568 ולהנחיות WCAG 2.1 ברמה AA.</p>
       <h3>מה נעשה</h3>
       <ul>
@@ -756,7 +762,8 @@ footer a { color: var(--muted); }
       </ul>
       <h3>נתקלתם בבעיה?</h3>
       <p>רכז הנגישות של VetBux זמין במייל <a href="mailto:vetbuxsupport@gmail.com" dir="ltr">vetbuxsupport@gmail.com</a>. אפשר גם לכתוב דרך הטופס בדף ולציין "נגישות" בשם המרפאה. נחזור אליכם תוך 3 ימי עבודה.</p>
-    </section>
+      </div>
+    </details>
 
     <p>© 2026 VetBux · תוכנה למרפאות וטרינריות בישראל</p>
   </div>
@@ -771,6 +778,13 @@ const CONFIG = {
 };
 
 (function () {
+  function openTarget() {
+    const el = location.hash && document.getElementById(location.hash.slice(1));
+    if (el && el.tagName === "DETAILS") { el.open = true; el.scrollIntoView(); }
+  }
+  window.addEventListener("hashchange", openTarget);
+  openTarget();
+
   const alt = document.getElementById("contact-alt");
   if (CONFIG.whatsappNumber) {
     const a = document.createElement("a");
