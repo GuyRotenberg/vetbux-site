@@ -26,9 +26,7 @@
 <meta name="twitter:image" content="https://vetbux.com/assets/og-image.png">
 <link rel="icon" href="assets/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Heebo:wght@400;500;700&display=swap">
+<link rel="preload" href="assets/fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -51,7 +49,7 @@
       "publisher": { "@id": "https://vetbux.com/#org" },
       "offers": {
         "@type": "Offer",
-        "price": "350",
+        "price": "300",
         "priceCurrency": "ILS",
         "description": "מנוי חודשי למרפאה עם עד שני וטרינרים. מחיר מייסדים ל-10 המרפאות הראשונות."
       }
@@ -61,7 +59,7 @@
       "mainEntity": [
         { "@type": "Question", "name": "האם VetBux עובדת לצד Rapid Vet?", "acceptedAnswer": { "@type": "Answer", "text": "כן. אפשר להתחיל רק עם התזכורות וקביעת התורים ולהמשיך לעבוד בתוכנה הקיימת. אנחנו מביאים את רשימת הלקוחות, החיות והחיסונים מהמערכת הקודמת." } },
         { "@type": "Question", "name": "מה הלקוח של המרפאה צריך להתקין?", "acceptedAnswer": { "@type": "Answer", "text": "שום דבר. התזכורת מגיעה בוואטסאפ עם כפתור לקביעת תור. הלקוח בוחר שעה פנויה, והתור נכנס ליומן של המרפאה." } },
-        { "@type": "Question", "name": "כמה זה עולה?", "acceptedAnswer": { "@type": "Answer", "text": "350 ₪ לחודש למרפאה עם עד שני וטרינרים. ל-10 המרפאות הראשונות: חודשיים חינם ואחר כך חצי מחיר בשנה הראשונה. הודעות הוואטסאפ מחויבות בנפרד לפי שימוש. אין התחייבות." } },
+        { "@type": "Question", "name": "כמה זה עולה?", "acceptedAnswer": { "@type": "Answer", "text": "300 ₪ לחודש למרפאה (במקום 400 ₪) עם עד שני וטרינרים. ל-10 המרפאות הראשונות: חודשיים חינם ואחר כך חצי מחיר בשנה הראשונה. הודעות הוואטסאפ מחויבות בנפרד לפי שימוש. אין התחייבות." } },
         { "@type": "Question", "name": "כמה זמן לוקח להתחיל?", "acceptedAnswer": { "@type": "Answer", "text": "אנחנו מקימים את המרפאה, מביאים את הנתונים ומגדירים את פרוטוקול החיסונים יחד אתכם. התזכורות יוצאות רק אחרי שאישרתם כל כלל." } }
       ]
     }
@@ -69,6 +67,109 @@
 }
 </script>
 <style>
+/* Fredoka and Heebo (SIL Open Font License), served from this site. */
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/fredoka-hebrew.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/fredoka-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/fredoka-hebrew.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/fredoka-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/fredoka-hebrew.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/fredoka-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/heebo-hebrew.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/heebo-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/heebo-hebrew.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(assets/fonts/heebo-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/heebo-hebrew.woff2) format('woff2');
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(assets/fonts/heebo-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 /* Layout: a single column that reads like the clinic's day — reminder goes out, owner books, it lands in the diary.
    The recurring motif is the vaccination booklet (פנקס חיסונים): stamped dose chips with real dates. */
 :root {
@@ -84,6 +185,9 @@
   --amber-soft: #fbefe2;
   --wa: #dcf8c6;
   --wa-ink: #111b21;
+  --wa-meta: #54656f;
+  --wa-day-bg: rgb(255 255 255 / .9);
+  --amber-ink: #8f4f12;
   --shadow: 0 1px 2px rgb(20 42 37 / .06), 0 12px 32px -12px rgb(20 42 37 / .18);
   --display: "Fredoka", "Heebo", "Arial Hebrew", Arial, sans-serif;
   --body: "Heebo", "Arial Hebrew", Arial, sans-serif;
@@ -93,7 +197,7 @@
   :root:not([data-theme="light"]) {
     --bg: #0e1715; --paper: #15211e; --ink: #e4eeea; --muted: #9db0aa; --line: #273733;
     --teal: #5cc4b2; --teal-deep: #8fdccd; --teal-soft: #17302b; --amber: #e5a86e; --amber-soft: #33261a;
-    --wa: #005c4b; --wa-ink: #e9edef;
+    --wa: #005c4b; --wa-ink: #e9edef; --wa-meta: #cfd8dc; --wa-day-bg: #182229; --amber-ink: #f0bd8a;
     --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 12px 32px -12px rgb(0 0 0 / .6);
     color-scheme: dark;
   }
@@ -101,7 +205,7 @@
 :root[data-theme="dark"] {
   --bg: #0e1715; --paper: #15211e; --ink: #e4eeea; --muted: #9db0aa; --line: #273733;
   --teal: #5cc4b2; --teal-deep: #8fdccd; --teal-soft: #17302b; --amber: #e5a86e; --amber-soft: #33261a;
-  --wa: #005c4b; --wa-ink: #e9edef;
+  --wa: #005c4b; --wa-ink: #e9edef; --wa-meta: #cfd8dc; --wa-day-bg: #182229; --amber-ink: #f0bd8a;
   --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 12px 32px -12px rgb(0 0 0 / .6);
   color-scheme: dark;
 }
@@ -144,6 +248,18 @@ p { margin: 0; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.skip { position: absolute; inset-inline-start: 16px; top: -80px; z-index: 20; background: var(--teal); color: #fff; padding: 10px 16px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+.skip:focus { top: calc(env(safe-area-inset-top, 0px) + 10px); }
+.req { color: var(--muted); font-weight: 400; }
+.field input[aria-invalid="true"] { border-color: #b3261e; }
+.legal { display: grid; gap: 10px; max-width: 760px; }
+.legal h3 { font-size: 1.05rem; font-family: var(--body); font-weight: 700; margin-top: 8px; }
+.legal p, .legal li { color: var(--muted); font-size: .92rem; }
+.legal ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+.video-desc { margin-top: 14px; color: #cfe5de; font-size: .95rem; background: transparent; border: 0; padding: 0; grid-column: 1 / -1; }
+.video-desc summary { cursor: pointer; font-weight: 700; }
+.video-desc p { color: inherit; padding: 8px 0 0; }
+.video-desc ol { margin: 8px 0 0; padding-inline-start: 22px; display: grid; gap: 4px; }
 .brand { display: flex; align-items: center; gap: 10px; font: 700 1.35rem/1 var(--display); color: var(--ink); text-decoration: none; }
 .brand img { width: 34px; height: 34px; border-radius: 9px; }
 .top nav { display: flex; align-items: center; gap: 22px; font-size: .95rem; }
@@ -176,7 +292,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .wa-head b { display: block; font-size: .95rem; }
 .wa-head small { opacity: .8; font-size: .75rem; }
 .wa-body { padding: 16px 12px 20px; display: grid; gap: 8px; min-height: 360px; align-content: start; }
-.wa-day { justify-self: center; font-size: .72rem; background: rgb(255 255 255 / .85); color: #54656f; padding: 3px 10px; border-radius: 8px; }
+.wa-day { justify-self: center; font-size: .72rem; background: var(--wa-day-bg); color: var(--wa-meta); padding: 3px 10px; border-radius: 8px; }
 .bubble {
   background: #fff; color: var(--wa-ink); border-radius: 10px 0 10px 10px; padding: 9px 11px 6px;
   font-size: .88rem; line-height: 1.55; max-width: 92%; justify-self: start; box-shadow: 0 1px 1px rgb(0 0 0 / .1);
@@ -184,8 +300,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 }
 :root[data-theme="dark"] .bubble { background: #202c33; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .bubble { background: #202c33; } }
-.bubble .foot { display: block; font-size: .72rem; color: #8696a0; margin-top: 4px; }
-.bubble .time { display: block; text-align: left; font-size: .68rem; color: #8696a0; }
+.bubble .foot { display: block; font-size: .72rem; color: var(--wa-meta); margin-top: 4px; }
+.bubble .time { display: block; text-align: left; font-size: .68rem; color: var(--wa-meta); }
 .wa-btn { justify-self: start; width: 92%; text-align: center; background: #fff; color: #027eb5; font-weight: 500; font-size: .9rem; padding: 9px; border-radius: 10px; box-shadow: 0 1px 1px rgb(0 0 0 / .1); }
 :root[data-theme="dark"] .wa-btn { background: #202c33; color: #53bdeb; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .wa-btn { background: #202c33; color: #53bdeb; } }
@@ -203,7 +319,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .stamp b { display: block; font-family: var(--display); font-size: .95rem; color: var(--teal); }
 .stamp.s1 { top: 30%; inset-inline-end: -8px; transform: rotate(-4deg); }
 .stamp.s2 { bottom: 10%; inset-inline-start: 0; transform: rotate(3deg); border-color: var(--amber); }
-.stamp.s2 b { color: var(--amber); }
+.stamp.s2 b { color: var(--amber-ink); }
 @media (max-width: 520px) { .stamp { display: none; } }
 
 /* trust strip */
@@ -269,7 +385,7 @@ section { padding-block: 84px; }
 .amount { font: 600 3.4rem/1 var(--display); font-variant-numeric: tabular-nums; }
 .amount small { font: 500 1.05rem var(--body); opacity: .85; }
 .founding ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; }
-.founding .btn { background: #fff; color: var(--teal-deep); justify-self: start; }
+.founding .btn { background: #fff; color: #0f4c42; justify-self: start; }
 .regular { border: 1px solid var(--line); background: var(--bg); }
 .regular .amount { color: var(--ink); }
 .regular p, .regular li { color: var(--muted); }
@@ -309,10 +425,11 @@ form { background: var(--paper); border: 1px solid var(--line); border-radius: 1
 footer { border-top: 1px solid var(--line); padding-block: 36px; color: var(--muted); font-size: .9rem; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
 footer a { color: var(--muted); }
-.a11y { max-width: 760px; }
+
 </style>
 </head>
 <body>
+<a class="skip" href="#top">דילוג לתוכן הראשי</a>
 
 <header class="top">
   <div class="wrap">
@@ -327,7 +444,7 @@ footer a { color: var(--muted); }
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div class="hero-copy">
@@ -344,7 +461,7 @@ footer a { color: var(--muted); }
         <p class="hero-note">עובד לצד Rapid Vet · בלי התקנה · ביטול בכל חודש</p>
       </div>
 
-      <div class="hero-visual" aria-label="דוגמה לתזכורת חיסון בוואטסאפ">
+      <div class="hero-visual" role="group" aria-label="דוגמה לתזכורת חיסון בוואטסאפ">
         <div class="stamp s1"><b>DAPP · חיסון שנתי</b>יעד 10/12 · תזכורת שבוע לפני</div>
         <div class="stamp s2"><b>כלבת · חובה בחוק</b>בוצע 26/10 · אצווה 4417</div>
         <div class="phone">
@@ -408,10 +525,23 @@ footer a { color: var(--muted); }
         <p class="lede">היום במרפאה, תיק החיה ופנקס החיסונים, הכללים שקובעים מתי יוצאת תזכורת, וקביעת התור מהטלפון של הלקוח. הכול על נתוני דמו.</p>
       </div>
       <div class="video-frame">
-        <video controls preload="metadata" playsinline poster="assets/video-poster.jpg" aria-label="סרטון הדגמה של VetBux">
+        <video controls preload="metadata" playsinline poster="assets/video-poster.jpg" aria-label="סרטון הדגמה של VetBux, ללא קול" aria-describedby="video-desc">
           <source src="assets/vetbux-demo.mp4" type="video/mp4">
         </video>
       </div>
+      <details class="video-desc" id="video-desc">
+        <summary>מה רואים בסרטון (תיאור בטקסט)</summary>
+        <p>הסרטון ללא קול, דקה אחת, על נתוני דמו מומצאים.</p>
+        <ol>
+          <li>דנה מקבלת בוואטסאפ תזכורת: חיסון DAPP לרקס מתקרב, בתאריך 10/12, עם כפתור "לקביעת תור".</li>
+          <li>היא לוחצת, בוחרת "חיסון בלבד", תאריך ושעה פנויה, וקובעת לחמישי 26/11 ב-17:30.</li>
+          <li>התור מופיע ביומן של המרפאה באותו יום ובאותה שעה.</li>
+          <li>תיק החיה: פנקס החיסונים עם מה שניתן ומתי מגיע הבא.</li>
+          <li>כללי החיסון של המרפאה: גיל התחלה, מרווחים ומועדי תזכורת.</li>
+          <li>היומן השבועי של הווטרינרית.</li>
+          <li>סיכום: מחיר מייסדים ל-10 המרפאות הראשונות, vetbux.com.</li>
+        </ol>
+      </details>
     </div>
   </section>
 
@@ -465,7 +595,7 @@ footer a { color: var(--muted); }
         </article>
       </div>
 
-      <div class="more" aria-label="עוד במערכת">
+      <div class="more" role="group" aria-label="עוד במערכת">
         <div><b>מרשמים</b><span>מרשם מודפס או במייל, עם חבילות קבועות</span></div>
         <div><b>תוצאות מעבדה</b><span>טבלאות בדיקה וערכי ייחוס לכל חיה</span></div>
         <div><b>דוח כלבת</b><span>הדוח לרשות, מוכן לייצוא</span></div>
@@ -488,8 +618,8 @@ footer a { color: var(--muted); }
         <div class="price-card founding">
           <span class="tag">ל-10 המרפאות הראשונות</span>
           <h3>מרפאה מייסדת</h3>
-          <div class="amount">175 ₪ <small>לחודש בשנה הראשונה, אחרי חודשיים חינם</small></div>
-          <div class="seats" aria-label="10 מקומות למרפאות מייסדות"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="amount">150 ₪ <small>לחודש בשנה הראשונה, אחרי חודשיים חינם</small></div>
+          <div class="seats" role="img" aria-label="10 מקומות למרפאות מייסדות"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <ul>
             <li>אנחנו מקימים את המרפאה ומביאים את הנתונים מהמערכת הקודמת</li>
             <li>מגדירים איתכם את פרוטוקול החיסונים</li>
@@ -499,7 +629,7 @@ footer a { color: var(--muted); }
         </div>
         <div class="price-card regular">
           <h3>מחיר רגיל</h3>
-          <div class="amount">350 ₪ <small>לחודש</small></div>
+          <div class="amount"><s style="opacity:.55;font-size:.6em;font-weight:500">400 ₪</s> 300 ₪ <small>לחודש למרפאה, מחיר השקה</small></div>
           <ul>
             <li>מרפאה עם עד שני וטרינרים. מרפאה גדולה יותר מקבלת הצעה</li>
             <li>הודעות וואטסאפ מחויבות בנפרד, לפי מה שנשלח בפועל</li>
@@ -556,11 +686,11 @@ footer a { color: var(--muted); }
 
       <form id="lead-form" novalidate>
         <div class="row2">
-          <div class="field"><label for="f-name">שם מלא</label><input id="f-name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="f-phone">טלפון נייד</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required placeholder="050-0000000"></div>
+          <div class="field"><label for="f-name">שם מלא <span class="req">(חובה)</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-phone">טלפון נייד <span class="req">(חובה)</span></label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required placeholder="050-0000000"></div>
         </div>
         <div class="row2">
-          <div class="field"><label for="f-clinic">שם המרפאה</label><input id="f-clinic" name="clinic" autocomplete="organization" required></div>
+          <div class="field"><label for="f-clinic">שם המרפאה <span class="req">(חובה)</span></label><input id="f-clinic" name="clinic" autocomplete="organization" required></div>
           <div class="field"><label for="f-city">עיר</label><input id="f-city" name="city" autocomplete="address-level2"></div>
         </div>
         <div class="row2">
@@ -577,8 +707,8 @@ footer a { color: var(--muted); }
               <option>1</option><option>2</option><option>3 ומעלה</option>
             </select></div>
         </div>
-        <input class="hp" id="f-website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <p class="consent">נשתמש בפרטים רק כדי לחזור אליכם לגבי VetBux. לא נעביר אותם לאף אחד ולא נשלח דיוור.</p>
+        <div class="hp" aria-hidden="true"><label for="f-website">אתר אינטרנט</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+        <p class="consent">אין חובה למסור את הפרטים. נשתמש בהם רק כדי לחזור אליכם לגבי VetBux, ולא נשלח דיוור. הטופס עובר דרך ספק הטפסים Formspree. פרטים ב<a href="#privacy">מדיניות הפרטיות</a>.</p>
         <button class="btn btn-primary" type="submit">לשריין מקום כמרפאה מייסדת</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
@@ -587,12 +717,49 @@ footer a { color: var(--muted); }
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>© 2026 VetBux · תוכנה למרפאות וטרינריות בישראל</span>
-    <details class="a11y" style="background:none;border:0;padding:0">
-      <summary style="padding:0;font-weight:500">הצהרת נגישות</summary>
-      <p style="padding-top:8px">האתר נבנה לפי הנחיות WCAG 2.1 ברמה AA: ניווט מלא במקלדת, טקסט חלופי לתמונות, ניגודיות צבעים וכיווניות מימין לשמאל. נתקלתם בבעיה? כתבו לנו בטופס למעלה ונטפל בה.</p>
-    </details>
+  <div class="wrap" style="display:grid;gap:28px">
+    <section class="legal" id="privacy" aria-labelledby="privacy-title">
+      <h2 id="privacy-title" style="font-size:1.35rem">מדיניות פרטיות</h2>
+      <p>עודכנה ב-17/11/2026. האתר שייך ל-VetBux, שמפתחת תוכנה למרפאות וטרינריות.</p>
+      <h3>מה אנחנו אוספים ולמה</h3>
+      <ul>
+        <li>רק מה שתכתבו בטופס: שם, טלפון נייד, שם המרפאה, עיר, התוכנה שאתם עובדים בה ומספר הווטרינרים. אין חובה חוקית למסור אותם, ובלי שם, טלפון ושם מרפאה לא נוכל לחזור אליכם.</li>
+        <li>מאיזה קישור הגעתם (למשל פוסט בפייסבוק), כדי לדעת איזה פרסום עובד. זה לא מזהה אתכם.</li>
+        <li>המטרה היחידה: לחזור אליכם ולתאם שיחה על VetBux. לא נשלח דיוור ולא נמכור את הפרטים.</li>
+      </ul>
+      <h3>מי עוד רואה את הפרטים</h3>
+      <ul>
+        <li><b>Formspree</b> (ארה״ב): מעבירה את הטופס אלינו במייל ושומרת עותק בחשבון שלנו.</li>
+        <li><b>GitHub Pages</b> (ארה״ב): מארחת את האתר, ורושמת כתובות IP ביומני השרת שלה לצורכי אבטחה.</li>
+      </ul>
+      <p>האתר לא משתמש בעוגיות, בכלי מעקב או בפרסום מותאם, והגופנים נטענים מהאתר עצמו.</p>
+      <h3>כמה זמן ומה הזכויות שלכם</h3>
+      <p>נשמור את הפרטים עד שנה מהפנייה האחרונה, ואז נמחק. אפשר לבקש לראות את הפרטים שלכם, לתקן או למחוק אותם, דרך הטופס בדף או בהודעה שתשלחו לנו כשנחזור אליכם.</p>
+    </section>
+
+    <section class="legal" id="accessibility" aria-labelledby="a11y-title">
+      <h2 id="a11y-title" style="font-size:1.35rem">הצהרת נגישות</h2>
+      <p>עודכנה ב-17/11/2026. האתר הותאם לתקן הישראלי 5568 ולהנחיות WCAG 2.1 ברמה AA.</p>
+      <h3>מה נעשה</h3>
+      <ul>
+        <li>ניווט מלא במקלדת, קישור "דילוג לתוכן הראשי" ומסגרת מיקוד גלויה.</li>
+        <li>כיווניות מימין לשמאל, מבנה כותרות תקין ושפת הדף מוגדרת לעברית.</li>
+        <li>ניגודיות צבעים לפי AA במצב בהיר ובמצב כהה.</li>
+        <li>הדף מתאים את עצמו לטלפון ולהגדלה עד 400% בלי גלילה הצידה.</li>
+        <li>טקסט חלופי לכל תמונה, ותיאור בטקסט לסרטון (הסרטון ללא קול).</li>
+        <li>שדות הטופס עם תוויות, סימון שדות חובה והודעות שגיאה שמוקראות לקורא מסך.</li>
+        <li>מכבדים את הגדרת "הפחתת תנועה" של המכשיר.</li>
+      </ul>
+      <h3>מגבלות ידועות</h3>
+      <ul>
+        <li>צילומי המסך של המערכת הם תמונות. מה שמופיע בהם מתואר בטקסט שלידם.</li>
+        <li>האתר נבדק בכלי בדיקה אוטומטיים ובמקלדת. בדיקה עם קורא מסך מלא עוד לא נעשתה.</li>
+      </ul>
+      <h3>נתקלתם בבעיה?</h3>
+      <p>כתבו לנו דרך הטופס בדף, וציינו "נגישות" בשם המרפאה. נחזור אליכם תוך 3 ימי עבודה.</p>
+    </section>
+
+    <p>© 2026 VetBux · תוכנה למרפאות וטרינריות בישראל</p>
   </div>
 </footer>
 
@@ -622,11 +789,12 @@ const CONFIG = {
 
   function fail(msg, field) {
     status.textContent = msg; status.className = "form-status err";
-    if (field) field.focus();
+    if (field) { field.setAttribute("aria-invalid", "true"); field.setAttribute("aria-describedby", "form-status"); field.focus(); }
   }
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    form.querySelectorAll("[aria-invalid]").forEach((el) => { el.removeAttribute("aria-invalid"); el.removeAttribute("aria-describedby"); });
     const data = Object.fromEntries(new FormData(form));
     if (data.website) return; // bot
     const name = form.elements.name, phone = form.elements.phone, clinic = form.elements.clinic;
