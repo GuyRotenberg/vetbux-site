@@ -51,7 +51,8 @@
         "@type": "Offer",
         "price": "300",
         "priceCurrency": "ILS",
-        "description": "מנוי חודשי למרפאה עם עד שני וטרינרים. מחיר מייסדים ל-10 המרפאות הראשונות."
+        "description": "מנוי חודשי למרפאה עם עד שני וטרינרים, לא כולל מע״מ. מחיר מייסדים ל-10 המרפאות הראשונות.",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "300", "priceCurrency": "ILS", "valueAddedTaxIncluded": false, "unitText": "חודש" }
       }
     },
     {
@@ -59,7 +60,7 @@
       "mainEntity": [
         { "@type": "Question", "name": "האם VetBux עובדת לצד Rapid Vet?", "acceptedAnswer": { "@type": "Answer", "text": "כן. אפשר להתחיל רק עם התזכורות וקביעת התורים ולהמשיך לעבוד בתוכנה הקיימת. אנחנו מביאים את רשימת הלקוחות, החיות והחיסונים מהמערכת הקודמת." } },
         { "@type": "Question", "name": "מה הלקוח של המרפאה צריך להתקין?", "acceptedAnswer": { "@type": "Answer", "text": "שום דבר. התזכורת מגיעה בוואטסאפ עם כפתור לקביעת תור. הלקוח בוחר שעה פנויה, והתור נכנס ליומן של המרפאה." } },
-        { "@type": "Question", "name": "כמה זה עולה?", "acceptedAnswer": { "@type": "Answer", "text": "300 ₪ לחודש למרפאה (במקום 500 ₪) עם עד שני וטרינרים. ל-10 המרפאות הראשונות שמצטרפות: חודשיים חינם, אחר כך 250 ₪ לחודש עד סוף השנה הראשונה, ואז לפי המחיר הרגיל. הודעות הוואטסאפ מחויבות בנפרד לפי שימוש. אין התחייבות." } },
+        { "@type": "Question", "name": "כמה זה עולה?", "acceptedAnswer": { "@type": "Answer", "text": "300 ₪ + מע״מ לחודש למרפאה (במקום 500 ₪) עם עד שני וטרינרים. ל-10 המרפאות הראשונות שמצטרפות: חודשיים חינם, אחר כך 250 ₪ לחודש עד סוף השנה הראשונה, ואז לפי המחיר הרגיל. הודעות הוואטסאפ מחויבות בנפרד לפי שימוש. אין התחייבות." } },
         { "@type": "Question", "name": "כמה זמן לוקח להתחיל?", "acceptedAnswer": { "@type": "Answer", "text": "אנחנו מקימים את המרפאה, מביאים את הנתונים ומגדירים איתכם את פרוטוקול החיסונים. התזכורות בוואטסאפ מתחילות לצאת אחרי ש-Meta מאשרת את החשבון העסקי של המרפאה ואת נוסח ההודעות, ורק לפי כללים שאישרתם." } }
       ]
     }
@@ -615,12 +616,13 @@ footer a { color: var(--muted); }
       <div class="section-head">
         <span class="eyebrow">מחיר</span>
         <h2 id="pricing-title">מחיר אחד למרפאה. בלי התחייבות.</h2>
+        <p class="lede">כל המחירים לא כוללים מע״מ.</p>
       </div>
       <div class="price-grid">
         <div class="price-card founding">
           <span class="tag">ל-10 המרפאות הראשונות</span>
           <h3>מרפאה מייסדת</h3>
-          <div class="amount">250 ₪ <small>לחודש בשנה הראשונה, אחרי חודשיים חינם. אחר כך לפי המחיר הרגיל באותה עת</small></div>
+          <div class="amount">250 ₪ <small>+ מע״מ לחודש בשנה הראשונה, אחרי חודשיים חינם. אחר כך לפי המחיר הרגיל באותה עת</small></div>
           <div class="seats" role="img" aria-label="10 מקומות למרפאות מייסדות"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           <ul>
             <li>אנחנו מקימים את המרפאה ומביאים את הנתונים מהמערכת הקודמת</li>
@@ -631,7 +633,7 @@ footer a { color: var(--muted); }
         </div>
         <div class="price-card regular">
           <h3>מחיר רגיל</h3>
-          <div class="amount"><s style="opacity:.55;font-size:.6em;font-weight:500"><span class="sr-only">במקום </span>500 ₪</s> 300 ₪ <small>לחודש למרפאה, מחיר השקה</small></div>
+          <div class="amount"><s style="opacity:.55;font-size:.6em;font-weight:500"><span class="sr-only">במקום </span>500 ₪</s> 300 ₪ <small>+ מע״מ לחודש למרפאה, מחיר השקה</small></div>
           <ul>
             <li>מרפאה עם עד שני וטרינרים. מרפאה גדולה יותר מקבלת הצעה</li>
             <li>הודעות וואטסאפ מחויבות בנפרד, לפי מה שנשלח בפועל</li>
